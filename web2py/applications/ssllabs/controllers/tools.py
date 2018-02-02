@@ -109,8 +109,38 @@ def traceroute_output():
 
 @auth.requires_login()
 def whois():
-    welcome_message_whois = "Welcome to the WHOIS Tool!"
-    return dict(message=welcome_message_whois)
+    import httplib
+    import subprocess
+    form = FORM('What IP address to \'TRACEROUTE\'? :',
+                INPUT(_name='ipaddress', requires=IS_IPV4()),
+                INPUT(_type='submit'))
+    if form.process().accepted:
+        session.flash = 'Input accepted'
+        session.vars = form.vars
+        # trace = os.popen('ping ' + '-c 2 '+ str(session.vars.ipaddress))
+        try:
+            uri = 'http://whois.arin.ne'
+            url = '/rest/ip/'
+            conn = httplib.HTTPConnection(uri)
+            conn.request('GET', url + uri)
+        except subprocess.CalledProcessError as e:
+            ret = e.returncode
+            if ret == 1 or ret == 2:
+                session.vars = timeout.split('\n')
+        # print(session.vars)
+        # trace.close()
+        redirect(URL('traceroute_output'))
+    elif form.errors:
+        response.flash = 'Input has errors'
+    else:
+        response.flash = 'Please enter a valid IPv4 address.'
+    # welcome_message_traceroute = "Welcome to the TRACEROUTE Tool!"
+    return dict(form=form)
+
+
+@auth.requires_login()
+def whois_output():
+    return dict(output=session.vars)
 
 
 def error():
