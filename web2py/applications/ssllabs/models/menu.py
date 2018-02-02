@@ -5,8 +5,8 @@
 # Customize your APP title, subtitle and menus here
 # ----------------------------------------------------------------------------------------------------------------------
 
-response.logo = A(B('Open-Xchange'), XML('&trade;&nbsp;'),
-                  _class="navbar-brand", _href="http://www.open-xchange.com",
+response.logo = A(B('WebNetTools'), XML('&trade;&nbsp;'),
+                  _class="navbar-brand", _href="http://www.microsoft.com",
                   _id="web2py-logo")
 response.title = request.application.replace('_', ' ').title()
 response.subtitle = 'Secure your SSL Certificates'
