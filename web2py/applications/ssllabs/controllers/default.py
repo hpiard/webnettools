@@ -17,7 +17,7 @@ def index():
     if you need a simple wiki simply replace the two lines below with:
     return auth.wiki()
     """
-    response.flash = T("Welcome to Open-Xchange's SSL Lab")
+    response.flash = T("Welcome to WebNetTools' SSL Lab")
     return dict(message=T('What? How? Why?'))
 
 
