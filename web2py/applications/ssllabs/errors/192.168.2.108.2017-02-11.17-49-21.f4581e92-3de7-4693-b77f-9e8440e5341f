@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.TypeError'> 'int' object is not iterable"
+p3
+sS'layer'
+p4
+S'/home/hpiard/PycharmProjects/OXaaS_ssllabs/web2py/applications/ssllabs/controllers/tools.py'
+p5
+sS'code'
+p6
+S'@auth.requires_login()\ndef certhealth():\n    ip_addresses = db().select(db.us_ips.ALL, orderby=db.us_ips.ip_address)\n    return dict(ip_adresses=ip_addresses)\n\n\n@auth.requires_login()\ndef checkports():\n    import ast\n    import os\n    import subprocess\n    db_request = db.us_ips(request.args(0, cast=int, otherwise=URL(\'error\'))) or redirect(URL(\'ssllabs\', \'index\'))\n    ports =  db_request[\'open_port\']\n    ports_as_list = ast.literal_eval(ports)\n    print ports_as_list\n    if 443 in ports_as_list:\n        pysslscan_cmd = os.system("pysslscan scan --scan=protocol.http --scan=vuln.heartbleed --scan=server.renegotiation" \\\n                          " --scan=server.preferred_ciphers --scan=server.ciphers   --report=term:rating=ssllabs.2009e"\n                          " --ssl2 --ssl3 --tls10 --tls11 --tls12 http://" + db_request[\'ip_address\'])\n        result = subprocess.check_output(pysslscan_cmd, shell=True)\n        print result\n\n    return dict(message=result)\n\n\n@auth.requires_login()\ndef ping():\n    welcome_message_ping = "Welcome to the PING Tool!"\n    return dict(message=welcome_message_ping)\n\n\n@auth.requires_login()\ndef traceroute():\n    welcome_message_traceroute = "Welcome to the TRACEROUTE Tool!"\n    return dict(message=welcome_message_traceroute)\n\n\n@auth.requires_login()\ndef whois():\n    welcome_message_whois = "Welcome to the WHOIS Tool!"\n    return dict(message=welcome_message_whois)\n\n\ndef error():\n    error_message = "Ooooops, I am sorry....something went terribly wrong.....please try again."\n    return dict(message=error_message)\nresponse._vars=response._caller(checkports)\n'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/home/hpiard/PycharmProjects/OXaaS_ssllabs/web2py/gluon/restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "/home/hpiard/PycharmProjects/OXaaS_ssllabs/web2py/applications/ssllabs/controllers/tools.py", line 47, in <module>\n  File "/home/hpiard/PycharmProjects/OXaaS_ssllabs/web2py/gluon/globals.py", line 417, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/hpiard/PycharmProjects/OXaaS_ssllabs/web2py/gluon/tools.py", line 4241, in f\n    return action(*a, **b)\n  File "/home/hpiard/PycharmProjects/OXaaS_ssllabs/web2py/applications/ssllabs/controllers/tools.py", line 20, in checkports\n    result = subprocess.check_output(pysslscan_cmd, shell=True)\n  File "/usr/lib/python2.7/subprocess.py", line 566, in check_output\n    process = Popen(stdout=PIPE, *popenargs, **kwargs)\n  File "/usr/lib/python2.7/subprocess.py", line 710, in __init__\n    errread, errwrite)\n  File "/usr/lib/python2.7/subprocess.py", line 1206, in _execute_child\n    args = list(args)\nTypeError: \'int\' object is not iterable\n'
+p11
+s.

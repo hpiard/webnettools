@@ -1,0 +1,43 @@
+{{left_sidebar_enabled,right_sidebar_enabled=False,('message' in globals())}}
+{{extend 'layout.html'}}
+
+{{block header}}
+    <header class="container-fluid background">
+      <div class="jumbotron text-center">
+        {{if response.title:}}
+        <h1>{{=response.subtitle or ''}}</h1>
+        {{pass}}
+      </div>
+    </header>
+{{end}}
+
+{{if 'message' in globals():}}
+<h2><b>{{=message}}</b></h2>
+<p>
+    <br>
+    This service uses ssllabs.com API to programmatically check SSL Certificates.<br><br>
+    What is is good for? <br>
+    As part of our security procedures, we monitor the health and security level of our
+    SSL certificates in use. <br><br>
+    How many times does it check a certificate?<br>
+    Each Certificate gets checked at least once a week.<br><br>
+    To add new URLs you'd like to check, simply use the <a href="{{=URL('', 'appadmin')}}">DB Web Interface</a>
+    and add URLs.<br><br>
+    We accept certificates with <b>"A"</b> ratings only.<br><br><br>
+</p>
+
+{{elif 'content' in globals():}}
+{{=content}}
+{{else:}}
+{{=BEAUTIFY(response._vars)}}
+{{pass}}
+
+{{block right_sidebar}}
+<div class="panel panel-info">
+  <div class="panel-heading"><h3 class="panel-title"><a class="btn-block"
+      href="{{=URL('admin','default','index')}}">
+      <i class="glyphicon glyphicon-cog"></i>
+      {{=T("admin")}}
+    </a></h3></div>
+  </div>
+{{end}}

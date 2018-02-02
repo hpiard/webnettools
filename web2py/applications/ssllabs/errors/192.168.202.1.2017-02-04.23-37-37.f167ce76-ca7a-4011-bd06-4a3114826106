@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.NameError'> global name 'divt' is not defined"
+p3
+sS'layer'
+p4
+S'/home/hpiard/PycharmProjects/OXaaS_ssllabs/web2py/applications/ssllabs/controllers/tools.py'
+p5
+sS'code'
+p6
+S'@auth.requires_login()\ndef certhealth():\n    return divt(message1="certhealth")\n\n\n@auth.requires_login()\ndef ping():\n    return dict(message2="ping")\n\n\n@auth.requires_login()\ndef traceroute():\n    return dict(message3="traceroute")\n\n\n@auth.requires_login()\ndef whois():\n    return dict(message4="whois")\n\nresponse._vars=response._caller(certhealth)\n'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/home/hpiard/PycharmProjects/OXaaS_ssllabs/web2py/gluon/restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "/home/hpiard/PycharmProjects/OXaaS_ssllabs/web2py/applications/ssllabs/controllers/tools.py", line 20, in <module>\n  File "/home/hpiard/PycharmProjects/OXaaS_ssllabs/web2py/gluon/globals.py", line 417, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/hpiard/PycharmProjects/OXaaS_ssllabs/web2py/gluon/tools.py", line 4241, in f\n    return action(*a, **b)\n  File "/home/hpiard/PycharmProjects/OXaaS_ssllabs/web2py/applications/ssllabs/controllers/tools.py", line 3, in certhealth\n    return divt(message1="certhealth")\nNameError: global name \'divt\' is not defined\n'
+p11
+s.

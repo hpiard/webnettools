@@ -1,0 +1,20 @@
+{{extend 'layout.html'}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{for each in scan_result.split('\n'):}}
+    {{if each == "Supported Server Cipher(s):" or each == "Preferred Server Cipher(s):" or \
+each == "SSLv3 Protocol version not supported" or each == "Session:" or each == "TLS renegotiation:" \
+or each == "EC Pointer Format(s):" or each == "HTTP Information" or each == "Heartbleed(Vulnerability)":}}
+        {{=B(P(each))}}
+    {{else:}}
+        {{=P(each)}}
+    {{pass}}
+{{pass}}
+</body>
+</html>
+{{=response.toolbar()}}

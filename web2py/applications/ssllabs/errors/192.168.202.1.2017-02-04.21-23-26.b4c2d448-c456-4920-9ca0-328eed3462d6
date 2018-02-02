@@ -1,0 +1,592 @@
+(dp1
+S'output'
+p2
+S'The "end" tag is unmatched, please check if you have a starting "block" tag'
+p3
+sS'layer'
+p4
+S'ParserContainer'
+p5
+sS'code'
+p6
+S'{{left_sidebar_enabled,right_sidebar_enabled=False,(\'message\' in globals())}}\n{{extend \'layout.html\'}}\n\n{{block header}}\n    <header class="container-fluid background">\n      <div class="jumbotron text-center">\n        {{if response.title:}}\n        <h1>{{=response.title}}\n          <small>{{=response.subtitle or \'\'}}</small></h1>\n        {{pass}}\n      </div>\n    </header>\n{{end}}\n\n{{if \'message\' in globals():}}\n<h2>{{=message}}</h2>\n\n{{elif \'content\' in globals():}}\n{{=content}}\n{{else:}}\n{{=BEAUTIFY(response._vars)}}\n{{pass}}\n{{end}}\n'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__module__'
+p12
+S"'ssl'"
+p13
+sS'__getslice__'
+p14
+S"<method-wrapper '__getslice__' of SSLError object>"
+p15
+sS'__str__'
+p16
+S"<method-wrapper '__str__' of SSLError object>"
+p17
+sS'__reduce__'
+p18
+S'<built-in method __reduce__ of SSLError object>'
+p19
+sS'__dict__'
+p20
+S'{}'
+p21
+sS'__sizeof__'
+p22
+S'<built-in method __sizeof__ of SSLError object>'
+p23
+sS'__weakref__'
+p24
+S'None'
+p25
+sS'__init__'
+p26
+S"<method-wrapper '__init__' of SSLError object>"
+p27
+sS'__setattr__'
+p28
+S"<method-wrapper '__setattr__' of SSLError object>"
+p29
+sS'__reduce_ex__'
+p30
+S'<built-in method __reduce_ex__ of SSLError object>'
+p31
+sS'__new__'
+p32
+S'<built-in method __new__ of type object>'
+p33
+sS'errno'
+p34
+S'None'
+p35
+sS'__format__'
+p36
+S'<built-in method __format__ of SSLError object>'
+p37
+sS'__class__'
+p38
+S"<class 'ssl.SSLError'>"
+p39
+sS'filename'
+p40
+S'None'
+p41
+sS'__doc__'
+p42
+S"'An error occurred in the SSL implementation.'"
+p43
+sS'__getitem__'
+p44
+S"<method-wrapper '__getitem__' of SSLError object>"
+p45
+sS'__setstate__'
+p46
+S'<built-in method __setstate__ of SSLError object>'
+p47
+sS'__getattribute__'
+p48
+S"<method-wrapper '__getattribute__' of SSLError object>"
+p49
+sS'args'
+p50
+S"('The read operation timed out',)"
+p51
+sS'__subclasshook__'
+p52
+S'<built-in method __subclasshook__ of type object>'
+p53
+sS'__unicode__'
+p54
+S'<built-in method __unicode__ of SSLError object>'
+p55
+sS'strerror'
+p56
+S'None'
+p57
+sS'__delattr__'
+p58
+S"<method-wrapper '__delattr__' of SSLError object>"
+p59
+sS'__repr__'
+p60
+S"<method-wrapper '__repr__' of SSLError object>"
+p61
+sS'__hash__'
+p62
+S"<method-wrapper '__hash__' of SSLError object>"
+p63
+ssS'evalue'
+p64
+S"('The read operation timed out',)"
+p65
+sS'frames'
+p66
+(lp67
+(dp68
+S'file'
+p69
+S'/home/hpiard/PycharmProjects/OXaaS_ssllabs/web2py/gluon/rocket.py'
+p70
+sS'dump'
+p71
+(dp72
+S'self'
+p73
+S'<WSGIWorker(Thread-10, started daemon 139868512425728)>'
+p74
+sS'conn'
+p75
+S'<gluon.rocket.Connection object>'
+p76
+sS'self.run_app'
+p77
+S'<bound method WSGIWorker.run_app of <WSGIWorker(Thread-10, started daemon 139868512425728)>>'
+p78
+ssS'lnum'
+p79
+I1337
+sS'lines'
+p80
+(dp81
+I1332
+S'            # Enter connection serve loop'
+p82
+sI1333
+S'            while True:'
+p83
+sI1334
+S'                if __debug__:'
+p84
+sI1335
+S"                    self.err_log.debug('Serving a request')"
+p85
+sI1336
+S'                try:'
+p86
+sI1337
+S'                    self.run_app(conn)'
+p87
+sI1338
+S'                except:'
+p88
+sI1339
+S'                    exc = sys.exc_info()'
+p89
+sI1340
+S'                    handled = self._handleError(*exc)'
+p90
+sI1341
+S'                    if handled:'
+p91
+ssS'call'
+p92
+S'(self=<WSGIWorker(Thread-10, started daemon 139868512425728)>)'
+p93
+sS'func'
+p94
+S'run'
+p95
+sa(dp96
+g69
+S'/home/hpiard/PycharmProjects/OXaaS_ssllabs/web2py/gluon/rocket.py'
+p97
+sg71
+(dp98
+S'self'
+p99
+S'<WSGIWorker(Thread-10, started daemon 139868512425728)>'
+p100
+sS'self.environ'
+p101
+S"{'HTTPS': 'on', 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, sdch, br', 'HTTP_ACCEPT_LANGUAGE': 'en-US,en;q=0.8,de;q=0.6,es;q=0.4', 'HTTP_CACHE_CONTROL': 'max-age=0', 'HTTP_CONNECTION': 'keep-alive', 'HTTP_COOKIE': 'session_id_welcome=192.168.202.1-7272db37-f7e7-4...92.168.202.1-26271a22-9d41-4342-aeff-34bfa6401d5a', 'HTTP_HOST': '192.168.202.213:8000', 'HTTP_UPGRADE_INSECURE_REQUESTS': '1', 'HTTP_USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) ...ML, like Gecko) Chrome/55.0.2883.95 Safari/537.36', ...}"
+p102
+sS'sock_file'
+p103
+S'<socket._fileobject object>'
+p104
+sS'environ'
+p105
+S'undefined'
+p106
+sS'self.build_environ'
+p107
+S'<bound method WSGIWorker.build_environ of <WSGIWorker(Thread-10, started daemon 139868512425728)>>'
+p108
+sS'conn'
+p109
+S'<gluon.rocket.Connection object>'
+p110
+ssg79
+I1830
+sg80
+(dp111
+I1825
+S'        else:'
+p112
+sI1826
+S'            sock_file = conn.makefile(BUF_SIZE)'
+p113
+sI1827
+S''
+sI1828
+S'        try:'
+p114
+sI1829
+S'            # Read the headers and build our WSGI environment'
+p115
+sI1830
+S'            self.environ = environ = self.build_environ(sock_file, conn)'
+p116
+sI1831
+S''
+sI1832
+S'            # Handle 100 Continue'
+p117
+sI1833
+S"            if environ.get('HTTP_EXPECT', '') == '100-continue':"
+p118
+sI1834
+S"                res = environ['SERVER_PROTOCOL'] + ' 100 Continue\\r\\n\\r\\n'"
+p119
+ssg92
+S'(self=<WSGIWorker(Thread-10, started daemon 139868512425728)>, conn=<gluon.rocket.Connection object>)'
+p120
+sg94
+S'run_app'
+p121
+sa(dp122
+g69
+S'/home/hpiard/PycharmProjects/OXaaS_ssllabs/web2py/gluon/rocket.py'
+p123
+sg71
+(dp124
+S'sock_file'
+p125
+S'<socket._fileobject object>'
+p126
+sS'self.read_request_line'
+p127
+S'<bound method WSGIWorker.read_request_line of <W...rker(Thread-10, started daemon 139868512425728)>>'
+p128
+sS'self'
+p129
+S'<WSGIWorker(Thread-10, started daemon 139868512425728)>'
+p130
+sS'request'
+p131
+g106
+ssg79
+I1650
+sg80
+(dp132
+I1645
+S'                                      "wsgiorg.futures": executor.futures})'
+p133
+sI1646
+S''
+sI1647
+S'    def build_environ(self, sock_file, conn):'
+p134
+sI1648
+S'        """ Build the execution environment. """'
+p135
+sI1649
+S'        # Grab the request line'
+p136
+sI1650
+S'        request = self.read_request_line(sock_file)'
+p137
+sI1651
+S''
+sI1652
+S'        # Copy the Base Environment'
+p138
+sI1653
+S'        environ = self.base_environ.copy()'
+p139
+sI1654
+S''
+ssg92
+S'(self=<WSGIWorker(Thread-10, started daemon 139868512425728)>, sock_file=<socket._fileobject object>, conn=<gluon.rocket.Connection object>)'
+p140
+sg94
+S'build_environ'
+p141
+sa(dp142
+g69
+S'/home/hpiard/PycharmProjects/OXaaS_ssllabs/web2py/gluon/rocket.py'
+p143
+sg71
+(dp144
+S'sock_file'
+p145
+S'<socket._fileobject object>'
+p146
+sS'sock_file.readline'
+p147
+S'<bound method _fileobject.readline of <socket._fileobject object>>'
+p148
+sS'd'
+g106
+ssg79
+I1388
+sg80
+(dp149
+I1383
+S''
+sI1384
+S'    def read_request_line(self, sock_file):'
+p150
+sI1385
+S"        self.request_line = ''"
+p151
+sI1386
+S'        try:'
+p152
+sI1387
+S'            # Grab the request line'
+p153
+sI1388
+S'            d = sock_file.readline()'
+p154
+sI1389
+S'            if PY3K:'
+p155
+sI1390
+S"                d = d.decode('ISO-8859-1')"
+p156
+sI1391
+S''
+sI1392
+S"            if d == '\\r\\n':"
+p157
+ssg92
+S'(self=<WSGIWorker(Thread-10, started daemon 139868512425728)>, sock_file=<socket._fileobject object>)'
+p158
+sg94
+S'read_request_line'
+p159
+sa(dp160
+g69
+S'/usr/lib/python2.7/socket.py'
+p161
+sg71
+(dp162
+S'self._sock.recv'
+p163
+g106
+sS'self._sock'
+p164
+S'None'
+p165
+sS'self'
+p166
+S'<socket._fileobject object>'
+p167
+sS'self._rbufsize'
+p168
+S'8192'
+p169
+sS'data'
+p170
+g106
+ssg79
+I447
+sg80
+(dp171
+I448
+S'                except error, e:'
+p172
+sI449
+S'                    if e.args[0] == EINTR:'
+p173
+sI450
+S'                        continue'
+p174
+sI451
+S'                    raise'
+p175
+sI442
+S''
+sI443
+S'            buf.seek(0, 2)  # seek end'
+p176
+sI444
+S'            self._rbuf = StringIO()  # reset _rbuf.  we consume it via buf.'
+p177
+sI445
+S'            while True:'
+p178
+sI446
+S'                try:'
+p179
+sI447
+S'                    data = self._sock.recv(self._rbufsize)'
+p180
+ssg92
+S'(self=<socket._fileobject object>, size=-1)'
+p181
+sg94
+S'readline'
+p182
+sa(dp183
+g69
+S'/usr/lib/python2.7/ssl.py'
+p184
+sg71
+(dp185
+S'self.read'
+p186
+S'<bound method SSLSocket.read of <ssl.SSLSocket object>>'
+p187
+sS'self'
+p188
+S'<ssl.SSLSocket object>'
+p189
+sS'buflen'
+p190
+S'8192'
+p191
+ssg79
+I714
+sg80
+(dp192
+I709
+S'        if self._sslobj:'
+p193
+sI710
+S'            if flags != 0:'
+p194
+sI711
+S'                raise ValueError('
+p195
+sI712
+S'                    "non-zero flags not allowed in calls to recv() on %s" %'
+p196
+sI713
+S'                    self.__class__)'
+p197
+sI714
+S'            return self.read(buflen)'
+p198
+sI715
+S'        else:'
+p199
+sI716
+S'            return self._sock.recv(buflen, flags)'
+p200
+sI717
+S''
+sI718
+S'    def recv_into(self, buffer, nbytes=None, flags=0):'
+p201
+ssg92
+S'(self=<ssl.SSLSocket object>, buflen=8192, flags=0)'
+p202
+sg94
+S'recv'
+p203
+sa(dp204
+g69
+S'/usr/lib/python2.7/ssl.py'
+p205
+sg71
+(dp206
+S'len'
+p207
+S'8192'
+p208
+sS'self'
+p209
+S'<ssl.SSLSocket object>'
+p210
+sS'self._sslobj.read'
+p211
+g106
+sS'self._sslobj'
+p212
+S'None'
+p213
+sS'v'
+g106
+ssg79
+I608
+sg80
+(dp214
+I608
+S'                v = self._sslobj.read(len or 1024)'
+p215
+sI609
+S'            return v'
+p216
+sI610
+S'        except SSLError as x:'
+p217
+sI611
+S'            if x.args[0] == SSL_ERROR_EOF and self.suppress_ragged_eofs:'
+p218
+sI612
+S'                if buffer is not None:'
+p219
+sI603
+S'            raise ValueError("Read on closed or unwrapped SSL socket.")'
+p220
+sI604
+S'        try:'
+p221
+sI605
+S'            if buffer is not None:'
+p222
+sI606
+S'                v = self._sslobj.read(len, buffer)'
+p223
+sI607
+S'            else:'
+p224
+ssg92
+S'(self=<ssl.SSLSocket object>, len=8192, buffer=None)'
+p225
+sg94
+S'read'
+p226
+sasS'pyver'
+p227
+S'Python 2.7.9: /usr/bin/python (prefix: /usr)'
+p228
+sS'etype'
+p229
+S"<class 'ssl.SSLError'>"
+p230
+sS'date'
+p231
+S'Sat Feb  4 21:23:26 2017'
+p232
+sS'locals'
+p233
+(dp234
+S'buffer'
+p235
+S'None'
+p236
+sS'x'
+S"SSLError('The read operation timed out',)"
+p237
+sS'self'
+p238
+S'<ssl.SSLSocket object>'
+p239
+sS'len'
+p240
+S'8192'
+p241
+sssS'traceback'
+p242
+S'Traceback (most recent call last):\n  File "/home/hpiard/PycharmProjects/OXaaS_ssllabs/web2py/gluon/rocket.py", line 1337, in run\n    self.run_app(conn)\n  File "/home/hpiard/PycharmProjects/OXaaS_ssllabs/web2py/gluon/rocket.py", line 1830, in run_app\n    self.environ = environ = self.build_environ(sock_file, conn)\n  File "/home/hpiard/PycharmProjects/OXaaS_ssllabs/web2py/gluon/rocket.py", line 1650, in build_environ\n    request = self.read_request_line(sock_file)\n  File "/home/hpiard/PycharmProjects/OXaaS_ssllabs/web2py/gluon/rocket.py", line 1388, in read_request_line\n    d = sock_file.readline()\n  File "/usr/lib/python2.7/socket.py", line 447, in readline\n    data = self._sock.recv(self._rbufsize)\n  File "/usr/lib/python2.7/ssl.py", line 714, in recv\n    return self.read(buflen)\n  File "/usr/lib/python2.7/ssl.py", line 608, in read\n    v = self._sslobj.read(len or 1024)\nSSLError: (\'The read operation timed out\',)\n'
+p243
+s.

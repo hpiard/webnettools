@@ -1,0 +1,39 @@
+{{extend 'layout.html'}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table style="width: 100%">
+    <tr>
+        <th>IP address</th>
+        <th>DNS</th>
+        <th>Open Ports</th>
+        <th>Last Scan</th>
+    </tr>
+{{for each in ip_adresses:}}
+    <tr>
+        {{if each.open_port == '[]':}}
+            <td>{{=P(A(each.ip_address, _href=URL('checkports', args=each.id)))}}</td>
+            <td>{{=P(each.dns)}}</td>
+            <td><p>No Port(s) open!</p></td>
+            <td>{{=P(str(each.datetime))}}</td>
+        {{elif each.open_port == "Host down or not reachable!":}}
+            <td>{{=P(each.ip_address)}}</td>
+            <td>{{=P(each.dns)}}</td>
+            <td>{{=P(each.open_port)}}</td>
+            <td>{{=P(str(each.datetime))}}</td>
+        {{else:}}
+            <td>{{=P(A(each.ip_address, _href=URL('checkports', args=each.id)))}}</td>
+            <td>{{=P(each.dns)}}</td>
+            <td>{{=P(each.open_port)}}</td>
+            <td>{{=P(str(each.datetime))}}</td>
+        {{pass}}
+    </tr>
+{{pass}}
+</table>
+</body>
+</html>
+{{=response.toolbar()}}

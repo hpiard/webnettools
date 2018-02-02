@@ -1,0 +1,16 @@
+../whois/parser.py
+../whois/__init__.py
+../whois/whois.py
+../whois/time_zones.py
+../whois/data/tlds.txt
+../whois/parser.pyc
+../whois/__init__.pyc
+../whois/whois.pyc
+../whois/time_zones.pyc
+./
+top_level.txt
+not-zip-safe
+PKG-INFO
+SOURCES.txt
+requires.txt
+dependency_links.txt
