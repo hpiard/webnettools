@@ -110,26 +110,28 @@ def traceroute_output():
 @auth.requires_login()
 def whois():
     import httplib
-    import subprocess
-    form = FORM('What IP address to \'TRACEROUTE\'? :',
+    #import subprocess
+    form = FORM('What IP address to \'WHOIS\'? :',
                 INPUT(_name='ipaddress', requires=IS_IPV4()),
                 INPUT(_type='submit'))
     if form.process().accepted:
         session.flash = 'Input accepted'
         session.vars = form.vars
-        # trace = os.popen('ping ' + '-c 2 '+ str(session.vars.ipaddress))
         try:
-            uri = 'http://whois.arin.ne'
-            url = '/rest/ip/'
-            conn = httplib.HTTPConnection(uri)
-            conn.request('GET', url + uri)
-        except subprocess.CalledProcessError as e:
-            ret = e.returncode
-            if ret == 1 or ret == 2:
-                session.vars = timeout.split('\n')
-        # print(session.vars)
-        # trace.close()
-        redirect(URL('traceroute_output'))
+            uri = 'whois.arin.net'
+            url = '/rest/ip/' + str(session.vars.ipaddress)
+            print(url)
+            headers = {"Content-type": "application/text",
+                       "Accept": "text/html"}
+            conn = httplib.HTTPConnection(uri, timeout=10)
+            conn.request('GET', url, '' , headers)
+            result = conn.getresponse()
+            session.vars = result.read()
+        except httplib.HTTPException as ex:
+            session.vars = ex
+            conn.close()
+        print(session.vars)
+        redirect(URL('whois_output'))
     elif form.errors:
         response.flash = 'Input has errors'
     else:

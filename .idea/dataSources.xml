@@ -1,25 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="storage.ssllabs.sqlite" uuid="8daec602-3152-4288-a9f0-b9e743d314ac">
+    <data-source source="LOCAL" name="storage.sqlite" uuid="555690fb-ce54-44ab-a3cd-2532890ca929">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/web2py/applications/ssllabs/databases/storage.ssllabs.sqlite</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/web2py/applications/ssllabs/databases/storage.sqlite</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="storage.ssllabs.sqlite [2]" uuid="8859cd1e-33c6-4707-983f-bdb45d5988c9">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/web2py/applications/ssllabs/databases/storage.ssllabs.sqlite</jdbc-url>
-      <driver-properties>
-        <property name="enable_load_extension" value="true" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="storage.ssllabs.sqlite [3]" uuid="4030eb4f-0ea6-4215-ab2c-3d6378ee4afc">
+    <data-source source="LOCAL" name="storage.ssllabs.sqlite" uuid="3e4a6443-6aae-409a-8c73-dfe240a75a30">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
